@@ -3,7 +3,7 @@ import { startStandaloneServer } from "@apollo/server/standalone";
 import { Query } from "./resolvers/Query.ts";
 import { Character } from "./resolvers/Character.ts"
 import { Episode } from "./resolvers/Episode.ts";
-import { typeDefs } from "./gql/schema.ts";
+import { typeDefs } from "./GQL/schema.ts";
 
 const server = new ApolloServer({   // Se crea el servidor
   typeDefs,
