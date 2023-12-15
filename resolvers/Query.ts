@@ -1,6 +1,5 @@
 import { GraphQLError } from "graphql";
 import { Character} from "../types.ts";
-import { Episode } from "../types.ts";
 
 export const Query = {
 
@@ -24,7 +23,7 @@ export const Query = {
 
     },
 
-    characterByID: async (_: unknown, args: {id: string}): Promise<Character> => {          // Array de personajes según sus IDs
+    characterByID: async (_: unknown, args: {id: number[] }): Promise<Character> => {          // Array de personajes según sus IDs
 
         const IDs = args.IDs.join(",");       // Se unen los IDs en un string separados por comas
 
