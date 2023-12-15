@@ -3,7 +3,7 @@ import {GraphQLError} from "graphql";
 
 export const Episode = {
 
-    characters: async (parent: typeof Episode): Promise<Character[]> => {       // Se define la función characters
+    characters: async (parent: Episode): Promise<Character[]> => {       // Se define la función characters
 
         const characterPromise: Promise<Character[]> = parent.characters.map(async elem => {    // Se crea un array de promesas
         
